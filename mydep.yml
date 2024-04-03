@@ -1,24 +1,24 @@
-piVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: mydep_from_jenkins
-  name: mydep_from_jenkins
+    app: mydep1
+  name: mydep1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mydep_from_jenkins
+      app: mydep1
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: mydep_from_jenkins
+        app: mydep1
     spec:
       containers:
-      - image: 'docker.io/dineshverma877/k8s:${BUILD_NUMBER}'
-        name: k8s
+      - image: docker.io/httpd
+        name: httpd
         resources: {}
 status: {}
