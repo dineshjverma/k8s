@@ -18,7 +18,7 @@ spec:
         app: mydep1
     spec:
       containers:
-      - image: docker.io/httpd
+      - image: docker.io/dineshverma877/port8888:1
         name: httpd
         resources: {}
 status: {}
